@@ -3,8 +3,8 @@ $(window).scroll(function(){
         $('.navbar-fixed-top').addClass('top-nav-collapse');
     } else {
         $('.navbar-fixed-top').removeClass('top-nav-collapse');
-        $('.navbar-brand').focus();
     }
+    $('#navbar li a').blur();
 });
 
 //Gives HTML page a "scrolling" effect when click on link in SPA.  "Scrolls" down.

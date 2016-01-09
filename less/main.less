@@ -5,6 +5,7 @@
 @primary: #26a5d3;
 @dark: #333333;
 @light: #f4f4f4;
+@special: rgba(255,255,255, 0.2);
 
 html{
   width: 100%;
@@ -58,7 +59,7 @@ a:hover,a:active{
 
 .navbar-brand:hover{
   outline: none;
-  background-color: rgba(255,255,255,0.2);
+  background-color: @special;
 }
 
 .navbar-brand:focus{
@@ -79,25 +80,8 @@ a:hover,a:active{
 #navbar li a:focus,
 #navbar li.active {
     outline: none;
-    background-color: rgba(255,255,255,0.2);
+    background-color: @special;
 }
-
-// // Code below should do same as code above BUT it does not
-// // Rather, it "adds" the 0.2 opacities when focus AND active are both in play
-// #navbar li a:hover {
-//   outline: none;
-//   background-color: rgba(255,255,255,0.2);
-// }
-//
-// #navbar li.focus {
-//   outline: none;
-//   background-color: rgba(255,255,255,0.2);
-// }
-//
-// #navbar li.active {
-//   outline: none;
-//   background-color: rgba(255,255,255,0.2);
-// }
 
 .navbar-toggle {
   padding: 4px 6px;
