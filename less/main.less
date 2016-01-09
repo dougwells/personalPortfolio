@@ -1,4 +1,15 @@
+@import "vendors/bootstrap/bootstrap.less";
+@import "vendors/font-awesome/font-awesome.less";
 
+//colors
+@primary: #26a5d3;
+@dark: #333333;
+@light: #f4f4f4;
+
+html{
+  width: 100%;
+  height: 100%;
+}
 
 body {
   width: 100%;
@@ -23,12 +34,13 @@ p{
 }
 
 a{
-  color: @primary;
+	color:@primary;
+
 }
 
-a:hover, a:focus{
-  text-decoration: none;
-  color: darken(@primary,20%);
+a:hover,a:active{
+	text-decoration:none;
+	color: darken(@primary, 20%);
 }
 
 //Navigation
@@ -42,6 +54,11 @@ a:hover, a:focus{
 
 .navbar-brand{
   font-weight: 700;
+}
+
+.navbar-brand:hover{
+  outline: none;
+  background-color: rgba(255,255,255,0.2);
 }
 
 .navbar-brand:focus{
@@ -58,10 +75,29 @@ a:hover, a:focus{
   transition:background .3s ease-in-out;
 }
 
-.navbar-custom li a:hover {
-  outline: none;
-  background-color: rgba(255,255,255,0.2);
+#navbar li a:hover,
+#navbar li a:focus,
+#navbar li.active {
+    outline: none;
+    background-color: rgba(255,255,255,0.2);
 }
+
+// // Code below should do same as code above BUT it does not
+// // Rather, it "adds" the 0.2 opacities when focus AND active are both in play
+// #navbar li a:hover {
+//   outline: none;
+//   background-color: rgba(255,255,255,0.2);
+// }
+//
+// #navbar li.focus {
+//   outline: none;
+//   background-color: rgba(255,255,255,0.2);
+// }
+//
+// #navbar li.active {
+//   outline: none;
+//   background-color: rgba(255,255,255,0.2);
+// }
 
 .navbar-toggle {
   padding: 4px 6px;
@@ -69,24 +105,35 @@ a:hover, a:focus{
   color: @light;
 }
 
+.icon-bar {
+  background-color: #fff;
+}
+
 @media (min-width: 767px) {
   .navbar{
     padding: 20px 0;
     border-bottom: none;
     background: transparent;
-    -webkit-transition:background .5s ease-in-out;
-    -moz-transition:background .5s ease-in-out;
-    transition:background .5s ease-in-out;
+    -webkit-transition:background .5s ease-in-out, padding .5s ease-in-out;
+    -moz-transition:background .5s ease-in-out, padding .5s ease-in-out;
+    transition:background .5s ease-in-out, padding .5s ease-in-out;
   }
 
-  .top-nav-collapse{
+  .top-nav-collapse
+  {
     padding: 0;
     background-color: @dark;
+    color: @light;
+    // border-bottom: 1px solid rgba(255,255,255,0.3);
   }
 
-  .navbar-custom.top-nav-collapse {
-    border-bottom: 1px solid rgba(255,255,255,0.3);
+  .top-nav-collapse li a:focus,
+  .top-nav-collapse li.active
+   {
+    outline: none;
+    background-color: rgba(255,255,255,0.2);
   }
+
 }
 
 //Landing Page
@@ -97,13 +144,14 @@ a:hover, a:focus{
   padding: 100px 0;
   text-align: center;
   color: @light;
-  background:url(https://dl.dropboxusercontent.com/s/gmmegbps5gmv73h/intro-bg.jpg) no-repeat bottom center scroll;
+  background:url(../img/intro-bg.jpg) no-repeat bottom center scroll;
   background-color: @dark;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
+
 
 .intro-body{
   display: table-cell;
@@ -134,7 +182,7 @@ a:hover, a:focus{
 }
 //Content
 .content-section{
-  padding: 80px 40px;
+  padding: 70px 0 40px 0;
 }
 
 //Icon Blocks
@@ -161,7 +209,7 @@ a:hover, a:focus{
 
 //Contact Us
 #who {
-  background:url(../img/downloads-bg.jpg) no-repeat center center scroll;
+  background:url(https://dl.dropboxusercontent.com/s/2lvup3xz0bylc6a/contactMe-bg.jpg) no-repeat center center scroll;
   width: 100%;
   padding:50px 0;
   color: @light;
