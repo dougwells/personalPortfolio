@@ -8820,12 +8820,17 @@ p {
   line-height: 1.6em;
 }
 a {
-  color: #26a5d3;
+  color: #f4f4f4;
 }
 a:hover,
-a:active {
+a:active,
+a:focus {
   text-decoration: none;
   color: #16617d;
+}
+p a,
+p a:focus {
+  color: #26a5d3;
 }
 .navbar {
   margin-bottom: 0;
@@ -8888,7 +8893,7 @@ a:active {
 }
 .intro {
   display: table;
-  height: auto;
+  height: 100%;
   width: 100%;
   padding: 100px 0;
   text-align: center;
@@ -8948,8 +8953,9 @@ a:active {
   width: 70%;
 }
 #who {
-  background: url(https://dl.dropboxusercontent.com/s/2lvup3xz0bylc6a/contactMe-bg.jpg) no-repeat center center scroll;
+  background: url(https://dl.dropboxusercontent.com/s/vxtq1b5he4wom23/beach.jpg?dl=0) no-repeat center center scroll;
   width: 100%;
+  height: 100%;
   padding: 50px 0;
   color: #f4f4f4;
   background-color: #333333;
@@ -8957,9 +8963,30 @@ a:active {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  text-align: left;
+  vertical-align: middle;
 }
 @media (min-width: 767px) {
   #who {
+    padding: 100px 0;
+  }
+}
+#what {
+  background: url(https://dl.dropboxusercontent.com/s/2lvup3xz0bylc6a/contactMe-bg.jpg) no-repeat center center scroll;
+  width: 100%;
+  height: 100%;
+  padding: 50px 0;
+  color: #f4f4f4;
+  background-color: #333333;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  text-align: left;
+  vertical-align: middle;
+}
+@media (min-width: 767px) {
+  #what {
     padding: 100px 0;
   }
 }
@@ -8996,11 +9023,18 @@ footer {
   max-width: 200px;
   background: #fff;
   /* fallback color for old browsers */
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.2);
   border-radius: 8px;
   color: #fff;
   text-align: center;
   text-decoration: none;
   letter-spacing: 1px;
   transition: all 0.3s ease-out;
+}
+.semi-transparent-button:hover,
+.semi-transparent-button:focus,
+.semi-transparent-button:active {
+  background: #f4f4f4;
+  color: #26a5d3;
+  transition: all 0.5s ease-in;
 }

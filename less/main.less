@@ -35,13 +35,17 @@ p{
 }
 
 a{
-	color:@primary;
+	color:@light;
 
 }
 
-a:hover,a:active{
+a:hover,a:active, a:focus{
 	text-decoration:none;
 	color: darken(@primary, 20%);
+}
+
+p a, p a:focus {
+  color: @primary;
 }
 
 //Navigation
@@ -123,7 +127,7 @@ a:hover,a:active{
 //Landing Page
 .intro {
   display: table;
-  height: auto;
+  height: 100%;
   width: 100%;
   padding: 100px 0;
   text-align: center;
@@ -191,10 +195,11 @@ a:hover,a:active{
   }
 }
 
-//Contact Us
+//Who I am
 #who {
-  background:url(https://dl.dropboxusercontent.com/s/2lvup3xz0bylc6a/contactMe-bg.jpg) no-repeat center center scroll;
+  background:url(https://dl.dropboxusercontent.com/s/vxtq1b5he4wom23/beach.jpg?dl=0) no-repeat center center scroll;
   width: 100%;
+  height: 100%;
   padding:50px 0;
   color: @light;
   background-color: @dark;
@@ -202,10 +207,35 @@ a:hover,a:active{
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  text-align: left;
+  vertical-align: middle;
 }
 
 @media (min-width: 767px) {
   #who{
+    padding: 100px 0;
+
+  }
+}
+
+//Contact Us
+#what {
+  background:url(https://dl.dropboxusercontent.com/s/2lvup3xz0bylc6a/contactMe-bg.jpg) no-repeat center center scroll;
+  width: 100%;
+  height: 100%;
+  padding:50px 0;
+  color: @light;
+  background-color: @dark;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  text-align: left;
+  vertical-align: middle;
+}
+
+@media (min-width: 767px) {
+  #what{
     padding: 100px 0;
 
   }
@@ -254,11 +284,19 @@ footer {
   width: 80%;
   max-width: 200px;
   background: #fff; /* fallback color for old browsers */
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.2);
   border-radius: 8px;
   color: #fff;
   text-align: center;
   text-decoration: none;
   letter-spacing: 1px;
   transition: all 0.3s ease-out;
+}
+
+.semi-transparent-button:hover,
+.semi-transparent-button:focus,
+.semi-transparent-button:active {
+  background: @light;
+  color: @primary;
+  transition: all 0.5s ease-in;
 }
