@@ -8952,6 +8952,28 @@ p a:focus {
   float: left;
   width: 70%;
 }
+.block-icon-right {
+  float: right;
+}
+.block-icon-right h1,
+.block-icon-right h2,
+.block-icon-right h3,
+.block-icon-right h4,
+.block-icon-right h5,
+.block-icon-right h6 {
+  margin: 0 0 10px 0;
+  padding: 0;
+  font-size: 20px;
+}
+.block-icon-right .icon {
+  float: left;
+  width: 30%;
+  margin-top: 10px;
+}
+.block-icon-right .icon-content {
+  float: left;
+  width: 70%;
+}
 #who {
   background: url(https://dl.dropboxusercontent.com/s/vxtq1b5he4wom23/beach.jpg?dl=0) no-repeat center center scroll;
   width: 100%;
