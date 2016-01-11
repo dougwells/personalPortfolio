@@ -8862,6 +8862,7 @@ p a:focus {
 #navbar li.active {
   outline: none;
   background-color: rgba(255, 255, 255, 0.2);
+  color: #ff0066;
 }
 .navbar-toggle {
   padding: 4px 6px;
@@ -8954,6 +8955,8 @@ p a:focus {
 }
 .block-icon-right {
   float: right;
+  max-width: 400px;
+  margin: 50px;
 }
 .block-icon-right h1,
 .block-icon-right h2,
@@ -8995,7 +8998,7 @@ p a:focus {
 }
 #what {
   background: url(https://dl.dropboxusercontent.com/s/2lvup3xz0bylc6a/contactMe-bg.jpg) no-repeat center center scroll;
-  width: 100%;
+  max-width: 100%;
   height: 100%;
   padding: 50px 0;
   color: #f4f4f4;
@@ -9004,7 +9007,7 @@ p a:focus {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  text-align: left;
+  text-align: left !important;
   vertical-align: middle;
 }
 @media (min-width: 767px) {
@@ -9047,7 +9050,6 @@ footer {
   /* fallback color for old browsers */
   background: rgba(255, 255, 255, 0.2);
   border-radius: 8px;
-  color: #fff;
   text-align: center;
   text-decoration: none;
   letter-spacing: 1px;

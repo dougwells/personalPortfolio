@@ -6,6 +6,7 @@
 @dark: #333333;
 @light: #f4f4f4;
 @special: rgba(255,255,255, 0.2);
+@navred: #ff0066;
 
 html{
   width: 100%;
@@ -85,6 +86,7 @@ p a, p a:focus {
 #navbar li.active {
     outline: none;
     background-color: @special;
+    color: @navred;
 }
 
 .navbar-toggle {
@@ -197,6 +199,8 @@ p a, p a:focus {
 
 .block-icon-right{
   float: right;
+  max-width: 400px;
+  margin: 50px;
 
   h1,h2,h3,h4,h5,h6{
     margin: 0 0 10px 0;
@@ -242,7 +246,7 @@ p a, p a:focus {
 //What I Believe
 #what {
   background:url(https://dl.dropboxusercontent.com/s/2lvup3xz0bylc6a/contactMe-bg.jpg) no-repeat center center scroll;
-  width: 100%;
+  max-width: 100%;
   height: 100%;
   padding:50px 0;
   color: @light;
@@ -251,7 +255,7 @@ p a, p a:focus {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  text-align: left;
+  text-align: left !important;
   vertical-align: middle;
 }
 
@@ -307,7 +311,6 @@ footer {
   background: #fff; /* fallback color for old browsers */
   background: rgba(255, 255, 255, 0.2);
   border-radius: 8px;
-  color: #fff;
   text-align: center;
   text-decoration: none;
   letter-spacing: 1px;
