@@ -113,7 +113,7 @@ p a, p a:focus {
 
   .top-nav-collapse
   {
-    padding: 0;
+    padding: 0px 0;
     background-color: @dark;
     color: @light;
     // border-bottom: 1px solid rgba(255,255,255,0.3);
@@ -142,7 +142,8 @@ section {
 //Landing Page
 .intro {
   display: table;
-  height: 100%;
+  // height: 100%;
+  height: 100vh;
   width: 100%;
   padding: 100px 0;
   text-align: center;
@@ -154,10 +155,6 @@ section {
   -o-background-size: cover;
   background-size: cover;
 }
-
-// .intro {
-//   height: 90vh;
-// }
 
 
 .intro-body{
@@ -193,7 +190,7 @@ section {
   background:url(https://dl.dropboxusercontent.com/s/vxtq1b5he4wom23/beach.jpg?dl=0) no-repeat bottom center scroll;
   width: 100%;
   height: 100%;  //set view height to 100% of view port
-  padding:100px 0;
+  padding:50px 0;
   color: @light;
   background-color: @dark;
   -webkit-background-size: cover;
@@ -205,7 +202,7 @@ section {
 
 @media (min-width: 767px) {
   #who{
-    padding: 0px;
+    // padding: 0px;
 
   }
 }
@@ -228,12 +225,12 @@ section {
 
 @media (min-width: 767px) {
   #what{
-    padding: 100px;
+    // padding: 100px;
 
   }
 }
 
-//Clients
+//Projects
 #projects {
   padding: 100px 0;
   max-width: 100%;
@@ -265,19 +262,19 @@ section {
   background-image: url(../img/la-jolla.jpeg); //no-repeat bottom center scroll;
   color: @light;
   /* Background image is centered vertically and horizontally at all times */
-background-position: center center;
+  background-position: center center;
 
-/* Background image doesn't tile */
-background-repeat: no-repeat;
+  /* Background image doesn't tile */
+  background-repeat: no-repeat;
 
-/* Background image is fixed in viewport.  Content "moves" over image vs
-content & image moving together.  Also, image does not move if content hieght
-is greater than image height */
-// background-attachment: fixed;
+  /* Background image is fixed in viewport.  Content "moves" over image vs
+  content & image moving together.  Also, image does not move if content hieght
+  is greater than image height */
+  // background-attachment: fixed;
 
-/* This is what makes the background image rescale based
-   on the container's size */
-background-size: cover;
+  /* This is what makes the background image rescale based
+     on the container's size */
+  background-size: cover;
 
 /* Set a background color that will be displayed
    while the background image is loading */
@@ -288,7 +285,7 @@ background-color: @dark;
   #contact{
   }
 }
-
+  /* Put "contact me" buttons vertically instead of horizontally */
 @media (max-width: 450px){
     #contact{
       .btn-link-1 {margin: 10px 100px;}
@@ -438,7 +435,7 @@ footer {
   opacity: 0.6;
 }
 
-//My portfolio page effects:
+//Projects Page:  My portfolio page effects:
 .grid {
 	position: relative;
 	margin: 0 auto;

@@ -8882,7 +8882,7 @@ p a:focus {
     transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
   }
   .top-nav-collapse {
-    padding: 0;
+    padding: 0px 0;
     background-color: #333333;
     color: #f4f4f4;
   }
@@ -8903,7 +8903,7 @@ section {
 }
 .intro {
   display: table;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   padding: 100px 0;
   text-align: center;
@@ -8941,7 +8941,7 @@ section {
   background: url(https://dl.dropboxusercontent.com/s/vxtq1b5he4wom23/beach.jpg?dl=0) no-repeat bottom center scroll;
   width: 100%;
   height: 100%;
-  padding: 100px 0;
+  padding: 50px 0;
   color: #f4f4f4;
   background-color: #333333;
   -webkit-background-size: cover;
@@ -8949,11 +8949,6 @@ section {
   -o-background-size: cover;
   background-size: cover;
   text-align: center;
-}
-@media (min-width: 767px) {
-  #who {
-    padding: 0px;
-  }
 }
 #what {
   background: url(https://dl.dropboxusercontent.com/s/2lvup3xz0bylc6a/contactMe-bg.jpg) no-repeat bottom center scroll;
@@ -8967,11 +8962,6 @@ section {
   -o-background-size: cover;
   background-size: cover;
   vertical-align: middle;
-}
-@media (min-width: 767px) {
-  #what {
-    padding: 100px;
-  }
 }
 #projects {
   padding: 100px 0;
@@ -8998,15 +8988,16 @@ section {
   /* Background image doesn't tile */
   background-repeat: no-repeat;
   /* Background image is fixed in viewport.  Content "moves" over image vs
-content & image moving together.  Also, image does not move if content hieght
-is greater than image height */
+  content & image moving together.  Also, image does not move if content hieght
+  is greater than image height */
   /* This is what makes the background image rescale based
-   on the container's size */
+     on the container's size */
   background-size: cover;
   /* Set a background color that will be displayed
    while the background image is loading */
   background-color: #333333;
 }
+/* Put "contact me" buttons vertically instead of horizontally */
 @media (max-width: 450px) {
   #contact .btn-link-1 {
     margin: 10px 100px;
