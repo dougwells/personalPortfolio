@@ -6,6 +6,7 @@
 @dark: #333333;
 @dark2: #373B44;
 @dark3: #2f3238;
+@dark4: #3085a3;
 @light: #f4f4f4;
 @special: rgba(255,255,255, 0.2);
 @navred: #ff0066;
@@ -235,7 +236,7 @@ section {
   padding: 100px 0;
   max-width: 100%;
   height: 100vh;  //set view height to 100% of view port
-  background: @dark3;
+  background: @dark;
 	color: #fff;
 	font-weight: 400;
 	font-size: 1em;
@@ -278,14 +279,14 @@ section {
 
 /* Set a background color that will be displayed
    while the background image is loading */
-background-color: @dark;
+background-color: @dark4;
 }
 
 @media (min-width: 767px) {
   #contact{
   }
 }
-  /* Put "contact me" buttons vertically instead of horizontally */
+/* Put "contact me" buttons vertically instead of horizontally */
 @media (max-width: 450px){
     #contact{
       .btn-link-1 {margin: 10px 100px;}
@@ -385,7 +386,7 @@ footer {
   transition: all 0.5s ease-in;
 }
 
-//hackerschool.mx buttons
+//hackerschool.mx buttons semi-transparent buttons w/background color
 .btn-link-1 {
 	position: relative;
 	display: inline-block;
@@ -424,16 +425,16 @@ footer {
     bottom: 10px;
 }
 
-//My Portfolio Page Effects
-.image-showcase {
-  height: 300px;
-  width: 300px;
-}
-
-.image-showcase:hover {
-  outline: 0;
-  opacity: 0.6;
-}
+// //My Portfolio Page Effects
+// .image-showcase {
+//   height: 300px;
+//   width: 300px;
+// }
+//
+// .image-showcase:hover {
+//   outline: 0;
+//   opacity: 0.6;
+// }
 
 //Projects Page:  My portfolio page effects:
 .grid {
@@ -455,7 +456,7 @@ footer {
 	max-width: 480px;
 	max-height: 360px;
 	width: 48%;
-	background: #3085a3;
+	background: @dark4;
 	text-align: center;
 	cursor: pointer;
 }
@@ -518,6 +519,8 @@ footer {
 	margin: 0;
 }
 
+//Font size for caption p element
+//Caution ... can cause overlay layout to mess up if go too big ...
 .grid figure p {
 	letter-spacing: 1px;
 	font-size: 68.5%;
@@ -544,12 +547,14 @@ figure.effect-chico figcaption {
 	padding: 3em;
 }
 
+//puts frame around effect and scales photo
 figure.effect-chico figcaption::before {
 	position: absolute;
 	top: 30px;
 	right: 30px;
 	bottom: 30px;
 	left: 30px;
+  //this is the white border of the effect
 	border: 1px solid #fff;
 	content: '';
 	-webkit-transform: scale(1.1);
@@ -563,14 +568,17 @@ figure.effect-chico p {
 	transition: opacity 0.35s, transform 0.35s;
 }
 
+//Padding from "border" on effect
 figure.effect-chico h2,
 figure.effect-chico h3 {
 	padding: 20% 0 20px 0;
 }
 
+//Amount of p text in caption effect (max-width)
 figure.effect-chico p {
 	margin: 0 auto;
-	max-width: 200px;
+  //max width of p element
+	max-width: 300px;
 	-webkit-transform: scale(1.5);
 	transform: scale(1.5);
 }
